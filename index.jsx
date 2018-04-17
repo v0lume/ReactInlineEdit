@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 function selectInputText(element) {
     element.setSelectionRange(0, element.value.length);
 }
 
-export default class InlineEdit extends React.Component {
+export default class InlineEdit extends Component {
     static propTypes = {
-        text: React.PropTypes.string.isRequired,
-        paramName: React.PropTypes.string.isRequired,
-        change: React.PropTypes.func.isRequired,
-        placeholder: React.PropTypes.string,
-        className: React.PropTypes.string,
-        activeClassName: React.PropTypes.string,
-        minLength: React.PropTypes.number,
-        maxLength: React.PropTypes.number,
-        validate: React.PropTypes.func,
-        style: React.PropTypes.object,
-        editingElement: React.PropTypes.string,
-        staticElement: React.PropTypes.string,
-        tabIndex: React.PropTypes.number,
-        isDisabled: React.PropTypes.bool,
-        editing: React.PropTypes.bool
+        text: PropTypes.string.isRequired,
+        paramName: PropTypes.string.isRequired,
+        change: PropTypes.func.isRequired,
+        placeholder: PropTypes.string,
+        className: PropTypes.string,
+        activeClassName: PropTypes.string,
+        minLength: PropTypes.number,
+        maxLength: PropTypes.number,
+        validate: PropTypes.func,
+        style: PropTypes.object,
+        editingElement: PropTypes.string,
+        staticElement: PropTypes.string,
+        tabIndex: PropTypes.number,
+        isDisabled: PropTypes.bool,
+        editing: PropTypes.bool
     };
 
     static defaultProps = {
